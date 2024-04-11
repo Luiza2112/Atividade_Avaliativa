@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RolagemDados.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout VerticalOptions="Center"
+                             Spacing="25"
+                             Margin="10">
+            <Label
+                FontAttributes="Bold"
+                FontSize="30"
+                HorizontalTextAlignment="Center"
+                x:Name="PageTitle"
+                Text="Rolador de dados"
+                />
+
+            <Label
+                FontAttributes="Bold"
+                FontSize="75"
+                HorizontalTextAlignment="Center"
+                x:Name="Number"
+                Text="6"
+                />
+
+            <Picker
+                x:Name="DiceNumbers"
+                HorizontalTextAlignment="Center"
+                Title="Quantidade de lados">
+
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>4</x:String>
+                        <x:String>6</x:String>
+                        <x:String>10</x:String>
+                        <x:String>20</x:String>
+                        <x:String>100</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+
+            </Picker>
+
+            <Button
+                x:Name="RollBtn"
+                Text="Rolar o Dado" 
+                Clicked="OnRollBtn_Clicked"
+                BackgroundColor="#222222"
+                />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
