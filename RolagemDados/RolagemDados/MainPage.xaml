@@ -6,10 +6,10 @@
     <ScrollView>
         <VerticalStackLayout VerticalOptions="Center"
                              Spacing="25"
-                             Margin="10">
+                             Padding="40">
             <Label
                 FontAttributes="Bold"
-                FontSize="30"
+                FontSize="Header"
                 HorizontalTextAlignment="Center"
                 x:Name="PageTitle"
                 Text="Rolador de dados"
@@ -17,16 +17,16 @@
 
             <Label
                 FontAttributes="Bold"
-                FontSize="75"
+                FontSize="Large"
                 HorizontalTextAlignment="Center"
-                x:Name="Number"
+                x:Name="ResultNumber"
                 Text="6"
                 />
 
             <Picker
-                x:Name="DiceNumbers"
+                x:Name="DiceSidesPicker"
                 HorizontalTextAlignment="Center"
-                Title="Quantidade de lados">
+                Title="Quantidade de lados:">
 
                 <Picker.ItemsSource>
                     <x:Array Type="{x:Type x:String}">

@@ -2,22 +2,20 @@
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
 
         public MainPage()
         {
             InitializeComponent();
+            DiceSidesPicker.SelectedItem = 0;
         }
 
         private void OnRollBtn_Clicked(object sender, EventArgs e)
         {
-            Random num = new();
-            //int Number = Convert.ToDouble(DiceNumbers.Text);
 
-            //for (int ctr = 1; ctr = Number; ctr++)
-            {
-
-            }
+            int selectedSides = Convert.ToInt32(DiceSidesPicker.SelectedItem);
+            int numeroSorteado = new Random().Next(1, selectedSides + 1);
+            //int numeroSorteado = new Random().Next(1, selectedSides) + 1;
+            ResultNumber.Text = numeroSorteado.ToString();
 
         }
     }
